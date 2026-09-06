@@ -6,17 +6,17 @@ import PopularRestaurants from "@/components/home/PopularRestaurants";
 import OffersSection from "@/components/home/OffersSection";
 import TrendingFoods from "@/components/home/TrendingFoods";
 import FeaturedRestaurants from "@/components/home/FeaturedRestaurants";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
-  const sectionVariants = {
+  const sectionVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+      transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
     },
   };
 
